@@ -1,0 +1,15 @@
+{
+  "csv_file": "data.csv",
+  "error_log_file": "error.log",
+  "batch_size": 500,
+  "queue_maxsize": 5000,
+  "validator_count": 12,
+  "mysql": {
+    "host": "localhost",
+    "user": "tDB",
+    "password": "1234",
+    "database": "csv_import"
+  },
+  "progress_update_interval": 200,
+  "rate_limit_ms": 0
+}
