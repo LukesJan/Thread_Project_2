@@ -1,0 +1,16 @@
+create database csv_import;
+
+use csv_import;
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    category VARCHAR(50),
+    price DECIMAL(10,2),
+    quantity INT
+);
+
+select count(id) as pocet
+from products;
+
+drop table products;
