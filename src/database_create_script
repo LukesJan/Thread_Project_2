@@ -1,4 +1,7 @@
 create database csv_import;
+CREATE USER 'tDB'@'localhost' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON csv_import.* TO 'tDB'@'localhost';
+FLUSH PRIVILEGES;
 
 use csv_import;
 

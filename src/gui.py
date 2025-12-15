@@ -55,7 +55,7 @@ class App:
         if self.file_path:
             self.lbl_file.config(text=self.file_path)
             with open(self.file_path, newline="", encoding="utf-8") as f:
-                self.total_rows = sum(1 for _ in f) - 1
+                self.total_rows = sum(1 for i in f) - 1
             self.progress["maximum"] = self.total_rows
 
     def import_csv(self):
@@ -78,7 +78,7 @@ class App:
         reader = CsvReaderThread(self.file_path)
         reader.start()
 
-        validators = [ValidationThread() for _ in range(VALIDATOR_COUNT)]
+        validators = [ValidationThread() for i in range(VALIDATOR_COUNT)]
         for v in validators:
             v.start()
 
